@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 28th Birthday!</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb);
+            overflow: hidden;
+            color: white;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Heading Animation */
+        h1 {
+            font-size: 4rem;
+            margin-top: 50px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffffff, 0 0 20px #ff6ec7, 0 0 30px #ff6ec7;
+            }
+            to {
+                text-shadow: 0 0 20px #ffffff, 0 0 40px #ff6ec7, 0 0 50px #ff6ec7;
+            }
+        }
+
+        /* Message Section */
+        p {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            line-height: 1.5;
+            padding: 0 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Floating Hearts */
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #ff6ec7;
+            opacity: 0.7;
+            transform: rotate(45deg);
+            animation: floatUp 5s infinite ease-in-out;
+            box-shadow: 0 0 5px #ff6ec7;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50%;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: -50%;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100%) scale(0.8) rotate(45deg);
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200%) scale(1.2) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 50%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(4) {
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-child(5) {
+            left: 90%;
+            animation-delay: 1.5s;
+        }
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 1.2rem;
+            text-shadow: 0 0 5px #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 Happy 28th Birthday! 🌟</h1>
+    <p>
+        On this special day, I wish you all the magic in the world. 💫 <br>
+        You are a star that shines brighter every year, <br>
+        and today the universe celebrates YOU. 🌸 <br>
+        May your heart be filled with joy, laughter, and love. <br>
+        Here’s to making unforgettable memories, <br>
+        because someone as incredible as you deserves nothing less. <br>
+        Happy Birthday! 🎉
+    </p>
+
+    <div class="hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <footer>
+        Made with endless love 💖, just for YOU!
+    </footer>
+</body>
+</html>
